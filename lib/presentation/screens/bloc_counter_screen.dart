@@ -8,6 +8,9 @@ class BlocCounterScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Bloc Screen'),
+        actions: [
+          IconButton(onPressed: () {}, icon: const Icon(Icons.refresh_rounded))
+        ],
       ),
       body: const Center(
         child: Text('Counter screen xxx'),
