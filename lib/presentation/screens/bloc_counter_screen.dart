@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class CubitScreen extends StatelessWidget {
-  const CubitScreen({super.key});
+class BlocCounterScreen extends StatelessWidget {
+  const BlocCounterScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Counter Screen'),
+        title: const Text('Bloc Screen'),
       ),
       body: const Center(
         child: Text('Counter screen xxx'),
@@ -20,13 +20,17 @@ class CubitScreen extends StatelessWidget {
             onPressed: () {},
             child: const Text('+3'),
           ),
-          const SizedBox(height: 10,),
+          const SizedBox(
+            height: 10,
+          ),
           FloatingActionButton(
             heroTag: '2',
             onPressed: () {},
             child: const Text('+2'),
           ),
-          const SizedBox(height: 10,),
+          const SizedBox(
+            height: 10,
+          ),
           FloatingActionButton(
             heroTag: '3',
             onPressed: () {},
