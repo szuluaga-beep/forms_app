@@ -7,13 +7,13 @@ class BlocCounterScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Bloc Screen'),
+        title: const Text('Bloc Xounter'),
         actions: [
           IconButton(onPressed: () {}, icon: const Icon(Icons.refresh_rounded))
         ],
       ),
       body: const Center(
-        child: Text('Counter screen xxx'),
+        child: Text('Counter screen xxx', style: TextStyle(fontSize: 20),),
       ),
       floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,
