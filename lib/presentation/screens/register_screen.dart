@@ -51,6 +51,7 @@ class _RegisterForm extends StatelessWidget {
     final registerCubit = context.watch<RegisterCubit>();
 
     final username = registerCubit.state.username;
+    final email = registerCubit.state.email;
     final password = registerCubit.state.password;
 
     return Form(
@@ -62,23 +63,9 @@ class _RegisterForm extends StatelessWidget {
             errorMessage: username.errorMessage),
         const SizedBox(height: 10),
         CustomTextFormField(
-          label: 'Correo electrónico',
-          onChanged: (value) {
-            registerCubit.emailChanged(value);
-          },
-          validator: (value) {
-            if (value == null || value.isEmpty) return 'Campo requerido';
-            if (value.trim().isEmpty) return 'Campo requerido';
-            final emailRegExp = RegExp(
-              r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$',
-            );
-
-            if (!emailRegExp.hasMatch(value))
-              return 'No tiene formato de correo';
-
-            return null;
-          },
-        ),
+            label: 'Correo electrónico',
+            onChanged: registerCubit.emailChanged,
+            errorMessage: email.errorMessage),
         const SizedBox(height: 10),
         CustomTextFormField(
           label: 'Contraseña',
