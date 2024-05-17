@@ -23,6 +23,7 @@ class CustomTextFormField extends StatelessWidget {
     final border = OutlineInputBorder(borderRadius: BorderRadius.circular(40));
 
     return TextFormField(
+      
       onChanged: onChanged,
       validator: validator,
       obscureText: obscureText,
